@@ -1,3 +1,32 @@
+BUILDING PIXYMON FOR LINUX
+(e-mail info@irlock.com for support)
+
+[1] Install dependencies:
+	sudo apt-get install git
+	sudo apt-get install libusb-1.0-0-dev
+	sudo apt-get install qt4-dev-tools
+	sudo apt-get install qt4-qmake
+	sudo apt-get install qt4-default
+	sudo apt-get install g++
+	
+[2] Download PixyMon source code:
+	git clone https://github.com/ThomasSFL/Pixymon_102beta.git
+	
+[3] Run buildpixymon.sh in the Pixymon_102beta directory:
+	cd /Pixymon_102beta
+	./buildpixymon.sh
+	
+[4] Connect Pixy via USB cable. 
+*** If you are trying to communicate as a non-root user, you may need to set permissions for Pixy. 
+	cd ../src/host/linux/
+	sudo cp pixy.rules /etc/udev/rules.d/
+
+[5] Run Pixymon:
+	cd ../../../build/pixymon/bin/
+	sudo ./PixyMon
+	
+	
+
 To build PixyMon for Linux, run these guys first, to make sure you have 
 everything you need:
 
